@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h1>{{ user.name }}</h1>
+     </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h1>User Email</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group"
+        appDropdown>
+            <button 
+            type="button" 
+            class="btn btn-primary dropdown-toggle">
+            Manage User<span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a (click)="onAddToTaskList()" style="cursor: pointer;">To User list</a></li>
+             <li><a style="cursor: pointer;" (click)="onEditUser()">Edit User</a></li>
+             <li><a style="cursor: pointer;" (click)="onDeleteUser()">Delete User</a></li>
+        </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        {{ user.email }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        {{ user.password }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let task of user.tasks">
+
+            </li>
+        </ul>
+    </div>
+</div>

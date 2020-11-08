@@ -1,0 +1,17 @@
+<div class="card" style="width: 18rem">
+    <div class="col-xs-10">
+        <div class="card-body">
+        <app-task-edit></app-task-edit>
+        <hr>
+        <ul class="list-group">
+            <a 
+            class="list-group-item" 
+            style="cursor: pointer"
+            *ngFor="let task of tasks; let i = index"
+            (click)="onEditTask(i)">
+            <h3 class="card-title">{{ task.task }}</h3>
+            <h4 class="card-subtitle">{{ task.status }} </h4>
+            <p c lass="card-text">{{task.done}}</p></a>
+        </ul>
+        </div>
+    </div>
