@@ -11,12 +11,12 @@ import { DataStorageService } from '../shared/data-storage.service';
 export class LoginComponent implements OnInit {
 users = [];
 
-  loginForm: FormGroup=new FormGroup({
-    email:new FormControl(null,[Validators.email,Validators.required]),
-    password:new FormControl(null, Validators.required)
+  loginForm: FormGroup = new FormGroup({
+    email: new FormControl(null, [Validators.email, Validators.required]),
+    password: new FormControl(null, Validators.required)
   });
 
-  constructor(private _router:Router, private dataStorageService: DataStorageService) { }
+  constructor(private _router: Router, private dataStorageService: DataStorageService) { }
 
   ngOnInit(): void {
   }
